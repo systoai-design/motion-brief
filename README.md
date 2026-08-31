@@ -103,11 +103,11 @@ docs/                        the screenshot
 
 ## Related Systo skills
 
-- **motion-graphics-director** decides how much production pipeline a piece needs, and
+- [**motion-graphics-director**](https://github.com/systoai-design/motion-graphics-director) decides how much production pipeline a piece needs, and
   runs before this one
-- **manifesto** is the other end of the same problem: when the ask is to match a
+- [**manifesto**](https://github.com/systoai-design/manifesto) is the other end of the same problem: when the ask is to match a
   reference frame for frame rather than to be inspired by it
-- **hyperframes-render-discipline** for verifying the render this brief produces
+- [**hyperframes-render-discipline**](https://github.com/systoai-design/hyperframes-render-discipline) for verifying the render this brief produces
 
 ## House style
 
