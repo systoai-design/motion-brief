@@ -6,7 +6,7 @@ description: Turn a motion-graphics reference into a script and direction docume
 # Motion brief
 
 A reference link is not a brief. This skill turns "make me something like this"
-into a document someone can actually build from, and — more importantly — catches
+into a document someone can actually build from, and, more importantly, catches
 the two things that sink these projects:
 
 1. **The reference's palette is almost never the client's palette.** Copying it
@@ -19,13 +19,13 @@ afterwards means discovering the direction was wrong after a full render.
 
 ---
 
-## Step 0 — Load the brand before you watch anything
+## Step 0, Load the brand before you watch anything
 
 Read the project's brand document first (`brand/BRAND.md`, a tokens file, a
 design system, whatever exists). You need the palette, the type stack, the voice
 and **especially the don'ts** in your head *before* the reference biases you.
 
-If there is no brand doc, ask for one or derive it from the live site — but say
+If there is no brand doc, ask for one or derive it from the live site, but say
 which you did.
 
 Also read any project state (`docs/project/STATE.md` and similar). It is where
@@ -34,10 +34,10 @@ before you put it in a film that is harder to correct than a web page.
 
 ---
 
-## Step 1 — Get the file
+## Step 1, Get the file
 
 **YouTube.** `yt-dlp` regularly 403s on the default client. Work down this chain
-until one succeeds — `android` is usually the one that works when the others don't:
+until one succeeds, `android` is usually the one that works when the others don't:
 
 ```bash
 for c in android ios mweb web_embedded web_safari; do
@@ -72,9 +72,9 @@ ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame
 
 ---
 
-## Step 2 — Watch it as contact sheets
+## Step 2, Watch it as contact sheets
 
-Never sample one frame at a time. Tile them and read the sheets with vision —
+Never sample one frame at a time. Tile them and read the sheets with vision,
 you see pacing and repetition that individual frames hide.
 
 ```bash
@@ -101,7 +101,7 @@ ffmpeg -y -ss <sec> -i ref.mp4 -frames:v 1 -vf "crop=W:H:X:Y,scale=1100:-1" zoom
 
 ---
 
-## Step 3 — Measure the audio. Do not guess.
+## Step 3, Measure the audio. Do not guess.
 
 This is the step that pays for the skill. People ask for "the sounds" imagining
 whooshes and impacts; references in restrained registers often contain none at
@@ -124,17 +124,17 @@ Reading them:
 |---|---|
 | Integrated ≈ −22 LUFS, LRA > 7 | Deliberately quiet and dynamic. Editorial register. Do not master this at −14. |
 | Integrated ≈ −12 LUFS, LRA < 5 | Loudness-maximised. Trailer/social register. |
-| Regular evenly-spaced vertical striations across the band | A struck or plucked instrument played steadily — piano family. |
+| Regular evenly-spaced vertical striations across the band | A struck or plucked instrument played steadily, piano family. |
 | Broadband bursts that ramp then stop | Whooshes and risers. **Actual sound design.** |
 | Sharp full-height spikes | Impacts and hits. |
-| Hard shelf around 15–16 kHz | Lossy codec bandwidth limit from the download, *not* a creative choice. Don't report it as one. |
+| Hard shelf around 15-16 kHz | Lossy codec bandwidth limit from the download, *not* a creative choice. Don't report it as one. |
 
 State every audio claim as measured, with the number. "No impacts" is only
 credible if you say you checked the spectrogram for them.
 
 ---
 
-## Step 4 — Name the register
+## Step 4, Name the register
 
 Write a comparison table. If there is a previous reference for the same client,
 compare against that; otherwise compare against the obvious default the client
@@ -142,13 +142,13 @@ might have expected. The table is what stops the build inheriting instincts from
 the wrong film.
 
 Compare on: **type treatment, cut rhythm, colour count, motion character, sound,
-density.** Then reduce the reference to its actual vocabulary — most good pieces
+density.** Then reduce the reference to its actual vocabulary, most good pieces
 run on three to five devices and nothing else. List them. That list becomes the
 build's entire toolkit.
 
 ---
 
-## Step 5 — The brand collision check (never skip)
+## Step 5, The brand collision check (never skip)
 
 Put the reference's system and the client's side by side and map every value:
 
@@ -171,7 +171,7 @@ Drop the brand's secondary accent if the register won't carry two.
 
 ---
 
-## Step 6 — Write the script
+## Step 6, Write the script
 
 Default structure unless told otherwise: **problem → solution → what we do → CTA.**
 
@@ -180,11 +180,11 @@ Default structure unless told otherwise: **problem → solution → what we do �
 - **Ask about numbers before including them.** Stats break a restrained register
   in one frame. In a punchy register they're the best thing you have. If the
   client says no numbers, that also means no counters, no percentages, no stat row.
-- **One emphasis device per line**, applied consistently — the accent word.
+- **One emphasis device per line**, applied consistently, the accent word.
 - **Write a callback.** Answer a complaint from Act I in Act III's own words.
   That single move is what makes a script feel written rather than assembled.
-- **Name the load-bearing line** — the promise being sold, the one competitors
-  can't copy — and hold it longest.
+- **Name the load-bearing line**, the promise being sold, the one competitors
+  can't copy, and hold it longest.
 - **Never lift the reference's copy.** Register and technique are fair game;
   the words are theirs. Write original lines.
 
@@ -192,13 +192,13 @@ Mark the accent word in every line so the reviewer sees the device working.
 
 ---
 
-## Step 7 — Budget runtime with wordless beats
+## Step 7, Budget runtime with wordless beats
 
 The mistake is assuming a longer film needs more lines. It doesn't.
 
 **Restrained films are long because of silence, not density.** In a quiet
 editorial reference, roughly a fifth of the runtime has no words on screen at
-all — passages where the visual vocabulary performs alone, or the frame simply
+all, passages where the visual vocabulary performs alone, or the frame simply
 sits empty. Those beats are what earn the register.
 
 So when a runtime grows, spend it on wordless beats first, and add lines only
@@ -207,7 +207,7 @@ when a line earns its place on merit. Then publish a segment table:
 | # | Segment | In | Out | Runs | Frames |
 
 Give every segment a frame range at the target fps, mark which are wordless, and
-let line pacing **accelerate slightly** across the film — a few tenths of a second
+let line pacing **accelerate slightly** across the film, a few tenths of a second
 per act. That acceleration is what stops a long, restrained piece reading as slow.
 
 Flag the boldest beat explicitly. An empty frame held five seconds is the thing
@@ -217,7 +217,7 @@ below which it reads as a mistake rather than a choice.
 
 ---
 
-## Step 8 — Spec the sound from the measurements
+## Step 8, Spec the sound from the measurements
 
 Layers: **bed, drone, build, SFX, silence, master.** Fill each from what you
 measured, not from what the genre usually does.
@@ -227,14 +227,14 @@ measured, not from what the genre usually does.
 - **Master target:** −16 LUFS integrated, true peak −1 dBTP for web, and keep LRA
   ≥ 6 if the reference was dynamic. If the reference is far quieter than that,
   say you're deliberately going louder and why.
-- **Tell them to audition tracks against the hardest beat** — the wordless one.
+- **Tell them to audition tracks against the hardest beat**, the wordless one.
   If a track can't hold that, it can't hold the film.
 - **Licensing is theirs to sort.** Point at Musicbed / Artlist / Epidemic with
   the search terms. Never imply the reference's own track is available.
 
 ---
 
-## Step 9 — Separate your calls from theirs
+## Step 9, Separate your calls from theirs
 
 End with the decisions that belong to the client, not to you. Typically:
 
@@ -253,7 +253,7 @@ why prevents a reviewer re-adding it in the next round.
 
 A markdown document in the repo (`docs/motion/SCRIPT-<runtime>.md`) as the source
 of truth. If the client will review it rather than a developer, also publish it
-as an artifact — a script reads far better with each act set on the ground colour
+as an artifact, a script reads far better with each act set on the ground colour
 it will actually be shot on, and the accent word live in the type.
 
 Open the document with **"For review. Nothing is built yet."** Ambiguity about
@@ -263,9 +263,9 @@ whether a thing exists yet costs a whole round of correspondence.
 
 - Do not reproduce the reference's script copy, in whole or lightly reworded.
 - Do not state an audio characteristic you did not measure.
-- Do not silently fix a brand collision — name every departure and its reason.
+- Do not silently fix a brand collision, name every departure and its reason.
 - Do not put an unsourced claim or contested stat into a film. Check project
   state first; a film is far harder to correct than a page.
-- If the client asked for something the reference cannot support — whooshes in a
-  film that has none — say so plainly, offer the alternative, and let them choose.
+- If the client asked for something the reference cannot support, whooshes in a
+  film that has none, say so plainly, offer the alternative, and let them choose.
   It can't be both.
